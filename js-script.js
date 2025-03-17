@@ -50,15 +50,15 @@ function etch(e) {
     if (e.target !== gridContainer) {
         if(e.target.style.backgroundColor === ""){
             let currentElement = e.target;
-            currentElement.style.border = "1px solid " + colors[num]
-            currentElement.style.backgroundColor = colors[num]
+            currentElement.style.border = "4px solid " + colors[num]
+            currentElement.style.backgroundColor = "black"
             currentElement.style.opacity = 0.1
         }
         else{
             
             if(e.target.style.opacity != 1.0){
-               let currentOpacity = e.target.style.opacity
-               console.log(e.target.style.opacity + 0.1)
+               e.target.style.opacity = parseFloat(e.target.style.opacity) + 0.1
+               
             }
         }
     }
