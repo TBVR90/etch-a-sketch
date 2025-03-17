@@ -3,7 +3,7 @@
 }
 
 .grid-element{
-    border:1px solid red;
+    border:1px solid rgb(255, 255, 255);
     padding: 0;
     margin: 0;
     aspect-ratio: 1/1;
@@ -14,6 +14,7 @@
 
 }
 
+
 body{
     height: 100vh;
     width: 100vw;
@@ -23,7 +24,14 @@ body{
     margin: 0;
 }
 
+main{
+    height: 100%;
+    width: 100%;
+}
 
+p{
+    color: black
+}
 
 #grid-container{
     height: 80%;
