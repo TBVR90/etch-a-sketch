@@ -43,9 +43,24 @@ gridContainer.addEventListener("mouseover", etch)
 
 
 function etch(e) {
+    const colors = ["red", "blue", "green", "yellow", "purple", "turqoise", "maroon", "pink"]
+    let num = Math.floor(Math.random() * colors.length)
+
+
     if (e.target !== gridContainer) {
-        let currentElement = e.target;
-        currentElement.style.border = "1px solid green"
+        if(e.target.style.backgroundColor === ""){
+            let currentElement = e.target;
+            currentElement.style.border = "1px solid " + colors[num]
+            currentElement.style.backgroundColor = colors[num]
+            currentElement.style.opacity = 0.1
+        }
+        else{
+            
+            if(e.target.style.opacity != 1.0){
+               let currentOpacity = e.target.style.opacity
+               console.log(e.target.style.opacity + 0.1)
+            }
+        }
     }
 }
 
